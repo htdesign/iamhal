@@ -4,7 +4,17 @@ h1 {
   font-weight: 800;
   letter-spacing: 0.05em;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 0.9; }
+
+h2 {
+  font-size: 5em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 60px;
+  margin-top: 0;
+  line-height: 0.9; }
 
 h4 {
   font-size: 1em;
@@ -20,6 +30,13 @@ h5 {
   font-size: 0.8em;
   text-transform: uppercase; }
 
+p {
+  font-size: 18px;
+  font-weight: 300; }
+
+b {
+  font-weight: 700; }
+
 html, body {
   width: 100%;
   height: 100%; }
@@ -28,7 +45,8 @@ body {
   background-color: #151515;
   color: #FFF;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.5; }
 
 .container {
   width: 100%;
@@ -75,7 +93,8 @@ body {
     width: 100%;
     flex: 1;
     display: flex;
-    z-index: 9; }
+    z-index: 9;
+    background-image: linear-gradient(-360deg, rgba(21, 21, 21, 0) 2%, #151515 79%); }
     .header .header-nav .logo {
       flex: 1; }
     .header .header-nav .menu {
@@ -116,5 +135,20 @@ body {
         width: 32px;
         height: 32px;
         background: url("../images/icon-arrow-down.svg") no-repeat center center; }
+
+.about {
+  padding: 360px 0;
+  display: flex;
+  justify-content: center; }
+  .about .bio-content {
+    display: flex;
+    display: flex;
+    width: 800px;
+    align-items: center;
+    justify-content: center; }
+    .about .bio-content .photo {
+      flex: 1; }
+    .about .bio-content .bio {
+      flex: 1; }
 
 /*# sourceMappingURL=page.css.map */
