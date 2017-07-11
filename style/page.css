@@ -137,7 +137,8 @@ body {
         background: url("../images/icon-arrow-down.svg") no-repeat center center; }
 
 .about {
-  padding: 360px 0;
+  height: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center; }
   .about .bio-content {
@@ -150,5 +151,18 @@ body {
       flex: 1; }
     .about .bio-content .bio {
       flex: 1; }
+      .about .bio-content .bio .btn-email {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        padding: 20px 60px;
+        font-family: OpenSansCondensed-Bold;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 5.71px;
+        margin-top: 30px; }
 
 /*# sourceMappingURL=page.css.map */
