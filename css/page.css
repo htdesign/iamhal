@@ -201,7 +201,7 @@ small,
   top: 0;
   left: 0;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 32px;
   width: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -431,7 +431,7 @@ small,
 }
 
 .about {
-  padding: 48px;
+  padding: 32px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

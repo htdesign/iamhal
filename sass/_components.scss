@@ -4,7 +4,7 @@
 	top: 0;
 	left: 0;
 	box-sizing: border-box;
-	padding: 30px;
+	padding: 32px;
 	width: 100%;
 	@include flexbox;
 	z-index: 9;
@@ -166,7 +166,7 @@
 // ABOUT
 
 .about {
-	padding: 48px;
+	padding: 32px;
 	@include flexbox;
 	@include flex-direction(column);
 
