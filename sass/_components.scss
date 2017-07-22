@@ -170,7 +170,7 @@
 	@include flexbox;
 	@include flex-direction(column);
 
-	@include desktop {
+	@include tablet {
 		margin: auto;
 		@include justify-content(center);
 		@include align-items(center);
@@ -180,8 +180,24 @@
 		max-width: 864px;		
 	}
 
+	@include desktop {
+		margin: auto;
+		@include justify-content(center);
+		@include align-items(center);
+		@include flex-direction(row);
+		height: 100%;
+		min-height: 100%;
+		max-width: 1024px;		
+	}
+
 	.about__photo {
 		@include flex(1);
+		margin-bottom: 32px;
+
+		@include tablet {
+			padding-left: 48px;
+			@include flex(2);
+		}
 
 		@include desktop{
 			@include flex(1);
@@ -192,9 +208,21 @@
 	.about__bio {
 		@include flex(1);
 
+		@include tablet {
+			padding-left: 48px;
+			@include flex(2);
+		}
+
 		@include desktop {
 			padding-left: 48px;
 			@include flex(2);
+		}
+
+		.bio__title{
+			margin-top: 0;
+			margin-left: 0;
+			padding: 0;
+			background: none;
 		}
 	}
 }

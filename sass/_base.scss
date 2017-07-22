@@ -7,13 +7,14 @@ body {
 	height: 100%;
 }
 
+html {
+	font-size: 1.125em;
+}
+
 body {
 	background-color: $background-color;
 }
 
-html {
-	font-size: 1em;
-}
 
 body {
 	color: $text-color-primary;
@@ -41,7 +42,8 @@ h5,
 .h5 {
 	margin: 1.414em 0 0.5em;
 	font-weight: inherit;
-	line-height: 1.2;
+	// line-height: 1.2;
+	line-height: 0.9;
 	font-weight: 800;
 }
 
@@ -52,10 +54,12 @@ h1,
 
 	@include tablet {
 		font-size: 6.854em;
+		line-height: 0.9;
 	}
 
 	@include desktop {
 		font-size: 6.854em;
+		line-height: 0.9;
 	}
 }
 

@@ -1,3 +1,7 @@
+//skrollr initialize
+var s = skrollr.init({forceHeight: false}); 
+
+//tiltjs
 $('.js-tilt').tilt({
     scale: 1.2
 })
