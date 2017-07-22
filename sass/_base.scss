@@ -100,7 +100,15 @@ h4,
 
 h5,
 .h5 {
-	font-size: 1em;
+	font-size: 0.75em;
+
+	@include tablet {
+		font-size: 1em;
+	}
+
+	@include desktop {
+		font-size: 1em;
+	}
 }
 
 small,
