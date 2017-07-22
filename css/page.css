@@ -203,6 +203,7 @@ small,
   box-sizing: border-box;
   padding: 32px;
   width: 100%;
+  position: absolute;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

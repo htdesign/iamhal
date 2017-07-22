@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	padding: 32px;
 	width: 100%;
+	position: absolute;
 	@include flexbox;
 	z-index: 9;
 	background-image: -webkit-linear-gradient(bottom, rgba(21, 21, 21, 0.00) 2%, #151515 79%);
