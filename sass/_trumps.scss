@@ -1,0 +1,35 @@
+.header {
+	.header__intro, .header__subtext {
+		text-transform: uppercase;
+	}
+
+	.header__subtext {
+		display: block;
+		@extend .h5;
+		letter-spacing: 0.3em;
+		font-weight: 400;
+		margin-top: -16px;
+
+		@include tablet{
+			margin-top: -48px;
+		}
+
+		@include desktop{
+			margin-top: -48px;
+		}
+	}
+
+	.header__taglineCopy {
+		font-family: $font-condensed;
+		text-transform: uppercase;
+		letter-spacing: 0.3em;
+		color: $text-color-secondary;
+		text-align: center;
+	}
+}
+
+.about {
+	.bio__title {
+		text-transform: uppercase;
+	}
+}
