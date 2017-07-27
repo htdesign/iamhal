@@ -36,9 +36,6 @@
 	@include flexbox;
 	@include justify-content(center);
 
-	@include phone {
-		align-items: flex-end;
-	}
 
 	&:before {
 		content: ' ';
@@ -85,6 +82,10 @@
 		@include flexbox;
 		@include justify-content(center);
 		@include align-items(center);
+		
+		@include phone {
+			@include align-items(flex-end);
+		}
 
 		.header__copy {
 			@include flex(1);
@@ -93,10 +94,7 @@
 			@include phone {
 				padding-left: 32px;
 				padding-bottom: 32px; 
-				background-image: -webkit-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
-				background-image: -moz-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
-				background-image: -o-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
-				background-image: linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
+				margin-bottom: 160px;
 			}
 		}
 
@@ -113,9 +111,11 @@
 			background-image: -moz-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
 			background-image: -o-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
 			background-image: linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
-
+			
 			@include phone {
-				display: none;
+				@include align-items(left);
+				// @include flex-direction(row);
+				padding: 32px;
 			}
 
 			@include tablet {
@@ -127,6 +127,7 @@
 			}
 
 			.header__taglineCopy {
+				@include flex(1);
 
 				@include tablet {
 					display: block;
@@ -139,6 +140,13 @@
 			.arrow-down {
 				@include flex(1);
 				margin: 32px auto 0 auto;
+
+				@include phone {
+					margin: 8px 0 0 0;
+					text-align: right;
+					animation-duration: 0s ;
+					max-width: 32px;
+				}
 
 				@include tablet {
 					display: block;

@@ -14,7 +14,7 @@
 
 	.header__subtext {
 		display: block;
-		@extend .h5;
+		font-size: 12px;
 		letter-spacing: 0.3em;
 		font-weight: 400;
 		margin-top: -16px;
@@ -34,6 +34,18 @@
 		letter-spacing: 0.3em;
 		color: $text-color-secondary;
 		text-align: center;
+
+		@include phone {
+			text-align: left;
+			font-size: 12px;
+			line-height: 16px;
+
+			span {
+				display: block;
+			}
+		}
+
+
 	}
 }
 
