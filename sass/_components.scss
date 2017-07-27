@@ -54,7 +54,8 @@
 		animation: 2.5s ease-in-out 0s infinite alternate running pulse;
 
 		@include phone {
-			background-position: 30% 66%;
+			background-position: 33% 100%;
+			background-attachment: scroll;
 		}
 	}
 
@@ -82,20 +83,10 @@
 		@include flexbox;
 		@include justify-content(center);
 		@include align-items(center);
-		
-		@include phone {
-			@include align-items(flex-end);
-		}
 
 		.header__copy {
 			@include flex(1);
 			text-align: center;
-
-			@include phone {
-				padding-left: 32px;
-				padding-bottom: 32px; 
-				margin-bottom: 160px;
-			}
 		}
 
 		.header__tagline {
@@ -112,11 +103,6 @@
 			background-image: -o-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
 			background-image: linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
 			
-			@include phone {
-				@include align-items(left);
-				// @include flex-direction(row);
-				padding: 32px;
-			}
 
 			@include tablet {
 				padding: 48px 0;
@@ -140,13 +126,6 @@
 			.arrow-down {
 				@include flex(1);
 				margin: 32px auto 0 auto;
-
-				@include phone {
-					margin: 8px 0 0 0;
-					text-align: right;
-					animation-duration: 0s ;
-					max-width: 32px;
-				}
 
 				@include tablet {
 					display: block;
