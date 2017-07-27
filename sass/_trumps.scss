@@ -1,6 +1,15 @@
 .header {
+
 	.header__intro, .header__subtext {
 		text-transform: uppercase;
+
+		@include phone {
+			text-align: left;
+		}
+	}
+
+	.header__intro span{
+		display: block;
 	}
 
 	.header__subtext {

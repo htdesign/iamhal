@@ -1,16 +1,12 @@
 //tiltjs
-$('.js-tilt').tilt({
-    scale: 1.2
-})
+// $('.js-tilt').tilt({
+//     scale: 1.2
+// })
 
-//rellax parallax
-var rellax = new Rellax('.rellax');
-// var rellax = new Rellax('.rellax', {center: true});
+//rellax parallax --------- var rellax = new Rellax('.rellax', {center: true});
+// var rellax = new Rellax('.rellax');
 
-// let animatedBounce = 'animated bounce';
-
-// $('h1').hover(function(){
-//     $(this).addClass(animatedBounce);
-// }).mouseout(function(){
-//     $(this).removeClass(animatedBounce);
-// });
+$.stellar({
+    positionProperty: 'transform',
+    hideDistantElements: false
+});
