@@ -52,11 +52,6 @@
 		min-height: 100%;
 		-webkit-animation: 2.5s ease-in-out 0s infinite alternate running pulse;
 		animation: 2.5s ease-in-out 0s infinite alternate running pulse;
-
-		@include phone {
-			background-position: 33% 100%;
-			background-attachment: scroll;
-		}
 	}
 
 	@-webkit-keyframes pulse {

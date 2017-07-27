@@ -213,13 +213,6 @@ small, .font_small {
   animation: 2.5s ease-in-out 0s infinite alternate running pulse;
 }
 
-@media (max-width: 767px) {
-  .header:before {
-    background-position: 33% 100%;
-    background-attachment: scroll;
-  }
-}
-
 @-webkit-keyframes pulse {
   0% {
     opacity: 0.1;
