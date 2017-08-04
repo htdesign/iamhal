@@ -2,19 +2,24 @@
 
 	.header__intro, .header__subtext {
 		text-transform: uppercase;
-
 	}
 
 	.header__intro span{
-		display: block;
+		@include phone {
+			display: block;
+		}
 	}
 
 	.header__subtext {
 		display: block;
-		font-size: 12px;
+		@extend .h5;
 		letter-spacing: 0.3em;
-		font-weight: 400;
 		margin-top: -16px;
+		font-weight: 400;
+
+		@include phone{
+			font-size: 12px;
+		}
 
 		@include tablet{
 			margin-top: -48px;
@@ -26,7 +31,7 @@
 	}
 
 	.header__taglineCopy {
-		font-family: $font-condensed;
+		font-family: $font-headers;
 		text-transform: uppercase;
 		letter-spacing: 0.3em;
 		color: $text-color-secondary;
@@ -48,5 +53,7 @@
 .about {
 	.bio__title {
 		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 1em;
 	}
 }
