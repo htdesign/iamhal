@@ -34,7 +34,7 @@
 	min-height: 100%;
 	margin: 0;
 	@include flexbox;
-	@include justify-content(center);
+	@include justify-content(flex-end);
 
 
 	&:before {
@@ -68,8 +68,10 @@
 			@include align-items(center);
 			@include flex-direction(column);
 			box-sizing: border-box;
+			margin-top: 64px;
 
 			@include tablet {
+				margin-top: 64px;
 			}
 
 			@include desktop {
@@ -96,11 +98,25 @@
 			background-image: -moz-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
 			background-image: -o-linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
 			background-image: linear-gradient(rgba(21, 21, 21, 0.00) 5%, #151515 100%);
-			padding: 60px 0;
+			padding-bottom: 32px;
+
+			.header__intro {
+				@include flex(1);
+				margin-bottom: 0;
+			}
+
+			.header__subtext {
+				@include flex(1);
+				margin-top: 0;
+			}
 
 			.arrow-down {
 				@include flex(1);
 				margin: 64px auto 0 auto;
+
+				@include phone {
+					margin-top: 32px;
+				}
 
 				@include tablet {
 					display: block;
@@ -118,10 +134,11 @@
 // ABOUT
 
 .about {
-	padding: 128px 32px;
 	width: 100%;
 	@include flexbox;
 	@include flex-direction(column);
+	margin: 124px auto;
+	border-right: 10px solid white;
 
 	@include tablet {
 		margin: auto;
@@ -130,48 +147,64 @@
 		@include flex-direction(row);
 		height: 100%;
 		min-height: 100%;
-		max-width: 864px;		
+		max-width: 864px;
+		max-width: 90vw;		
 	}
 
 	@include desktop {
-		margin: auto;
 		@include justify-content(center);
 		@include align-items(center);
 		@include flex-direction(row);
 		height: 100%;
 		min-height: 100%;
-		max-width: 1024px;		
+		max-width: 1200px;
+		max-width: 65vw;
 	}
 
 	.about__photo {
 		@include flex(1);
-		margin-bottom: 32px;
 		display: none;
+		margin-top: -32px;
 
 		@include tablet {
-			padding-left: 48px;
-			@include flex(2);
+			@include flex(1);
 			display: inline;
 		}
 
 		@include desktop {
 			@include flex(1);
-			padding-right: 48px;
-			display: inline;
+			display: inline-block;
+			order: 2;
+			width: 100%;
 		}
 	}
 
 	.about__bio {
 		@include flex(1);
+		position: relative;
+		padding-left: 128px;
 
 		@include tablet {
-			padding-left: 48px;
 			@include flex(2);
 		}
 
 		@include desktop {
-			padding-left: 48px;
-			@include flex(2);
+			@include flex(1);
+			order: 1;
+		}
+
+		.section__number {
+			font-size: 24em;
+			font-weight: 700;
+			font-family: $font-headers;
+			margin: 0;
+			margin-top: -256px;
+			padding: 0;
+			opacity: 0.1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
 		}
 
 		.bio__title{
@@ -184,15 +217,33 @@
 				display: block;
 			}
 		}
+
+		.btn {
+			margin-top: 48px;
+		}
 	}
 }
-
 
 .arrow-down {
 	display: block;
 	width: 32px;
 	height: 32px;
 	background: url('../images/icon-arrow-down.svg') no-repeat center center;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 12px 12px 12px 16px;
+	background: #FFF;
+	font-family: $font-headers;
+	font-weight: 700;
+	color: $background-color;
+	letter-spacing: 4px;
+	font-size: 14px;
 }
 
 .btn-email {

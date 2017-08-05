@@ -4,9 +4,17 @@
 		text-transform: uppercase;
 	}
 
+	.header__intro {
+		margin-bottom: 0;
+	}
+
 	.header__intro span{
 		@include phone {
-			display: block;
+			display: none;
+		}
+
+		@include tablet {
+			display: none;
 		}
 	}
 
@@ -14,19 +22,15 @@
 		display: block;
 		@extend .h5;
 		letter-spacing: 0.3em;
-		margin-top: -16px;
 		font-weight: 400;
-
-		@include phone{
-			font-size: 12px;
-		}
+		opacity: 0.3;
 
 		@include tablet{
-			margin-top: -48px;
+			
 		}
 
 		@include desktop{
-			margin-top: -48px;
+			
 		}
 	}
 
@@ -34,7 +38,8 @@
 		font-family: $font-headers;
 		text-transform: uppercase;
 		letter-spacing: 0.3em;
-		color: $text-color-secondary;
+		color: #fff;
+		opacity: 0.1;
 		text-align: center;
 
 		@include phone {
@@ -45,8 +50,6 @@
 				display: block;
 			}
 		}
-
-
 	}
 }
 
