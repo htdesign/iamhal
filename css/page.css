@@ -52,6 +52,8 @@ body {
 
 html {
   font-size: 18px;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -60,7 +62,6 @@ body {
 
 body {
   color: #FFF;
-  font-family: "Open Sans", sans-serif;
   line-height: 1.45;
 }
 
@@ -371,11 +372,18 @@ b, strong {
 }
 
 .header .header__content .header__tagline .header__taglineCopy {
+  opacity: 0.1;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+@media (max-width: 767px) {
+  .header .header__content .header__tagline .header__taglineCopy span {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -419,13 +427,27 @@ b, strong {
   }
 }
 
+@media (max-width: 767px) {
+  .header .header__content .header__copy .header__intro span {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header .header__content .header__copy .header__intro span {
+    display: none;
+  }
+}
+
 .header .header__content .header__copy .header__subtext {
+  display: block;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   margin-top: 0;
+  opacity: 0.3;
 }
 
 .header .header__content .header__copy .arrow-down {
@@ -472,7 +494,6 @@ b, strong {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .about {
-    margin: auto;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
@@ -532,6 +553,7 @@ b, strong {
     -ms-flex: 1;
     flex: 1;
     display: inline;
+    order: 2;
   }
 }
 
@@ -558,6 +580,12 @@ b, strong {
   padding-left: 160px;
 }
 
+@media (max-width: 767px) {
+  .about .about__bio {
+    padding: 0 48px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .about .about__bio {
     -webkit-box-flex: 2;
@@ -565,6 +593,8 @@ b, strong {
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2;
+    order: 1;
+    padding-left: 80px;
   }
 }
 
@@ -581,10 +611,6 @@ b, strong {
 
 .about .about__bio .section__number {
   position: absolute;
-  font-size: 24em;
-  font-weight: 700;
-  line-height: 1em;
-  font-family: "Khand", sans-serif;
   margin: 0;
   margin-top: -160px;
   padding: 0;
@@ -618,60 +644,27 @@ b, strong {
 
 .btn {
   display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
   box-sizing: border-box;
   padding: 16px 14px 16px 20px;
   border: 2px solid white;
   background: none;
+  text-align: center;
+  text-decoration: none;
   color: white;
   font-family: "Khand", sans-serif;
-  font-weight: 700;
   letter-spacing: 6px;
   font-size: 14px;
-}
-
-.btn-email {
-  display: inline-block;
-  text-decoration: none;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
-  border: 2px solid #FFFFFF;
-  box-sizing: border-box;
-  padding: 20px 60px;
-  font-family: "Khand", sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-  letter-spacing: 5.71px;
-  margin-top: 30px;
 }
 
 .header .header__intro, .header .header__subtext {
   text-transform: uppercase;
 }
 
-.header .header__intro {
-  margin-bottom: 0;
-}
-
-@media (max-width: 767px) {
-  .header .header__intro span {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .header .header__intro span {
-    display: none;
-  }
-}
-
 .header .header__subtext {
-  display: block;
   letter-spacing: 0.3em;
   font-weight: 400;
-  opacity: 0.3;
 }
 
 .header .header__taglineCopy {
@@ -679,7 +672,6 @@ b, strong {
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: #fff;
-  opacity: 0.1;
   text-align: center;
 }
 
@@ -688,15 +680,19 @@ b, strong {
     font-size: 12px;
     line-height: 16px;
   }
-  .header .header__taglineCopy span {
-    display: block;
-  }
 }
 
 .about .bio__title {
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1em;
+}
+
+.about .section__number {
+  font-size: 24em;
+  font-weight: 700;
+  line-height: 1em;
+  font-family: "Khand", sans-serif;
 }
  
 

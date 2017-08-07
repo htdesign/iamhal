@@ -164,7 +164,14 @@
 			}
 
 			.header__taglineCopy {
+				opacity: 0.1;
 				@include flex(1);
+
+				@include phone {
+					span {
+						display: block;
+					}
+				}
 
 				@include tablet {
 					display: block;
@@ -192,11 +199,23 @@
 				@include desktop {
 					margin-bottom: 16px;
 				}
+
+				span {
+					@include phone {
+						display: none;
+					}
+
+					@include tablet {
+						display: none;
+					}
+				}
 			}
 
 			.header__subtext {
+				display: block;
 				@include flex(1);
 				margin-top: 0;
+				opacity: 0.3;
 			}
 
 			.arrow-down {
@@ -230,7 +249,6 @@
 	position: relative;
 
 	@include tablet {
-		margin: auto;
 		@include justify-content(center);
 		@include align-items(center);
 		@include flex-direction(row);
@@ -246,7 +264,6 @@
 		height: 100%;
 		min-height: 100%;
 		max-width: 1100px;
-		// max-width: 65vw;
 	}
 
 	.about__photo {
@@ -258,6 +275,7 @@
 		@include tablet {
 			@include flex(1);
 			display: inline;
+			order: 2;
 		}
 
 		@include desktop {
@@ -273,8 +291,14 @@
 		position: relative;
 		padding-left: 160px;
 
+		@include phone {
+			padding: 0 48px;
+		}
+
 		@include tablet {
 			@include flex(2);
+			order: 1;
+			padding-left: 80px;
 		}
 
 		@include desktop {
@@ -284,10 +308,6 @@
 
 		.section__number {
 			position: absolute;
-			font-size: 24em;
-			font-weight: 700;
-			line-height: 1em;
-			font-family: $font-headers;
 			margin: 0;
 			margin-top: -160px;
 			padding: 0;
@@ -323,31 +343,16 @@
 
 .btn {
 	display: inline-block;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
 	box-sizing: border-box;
 	padding: 16px 14px 16px 20px;
 	border: 2px solid white;
 	background: none;
+	text-align: center;
+	text-decoration: none;
 	color: white;
 	font-family: $font-headers;
-	font-weight: 700;
 	letter-spacing: 6px;
 	font-size: 14px;
-}
-
-.btn-email {
-	display: inline-block;
-	text-decoration: none;
+	font-weight: 700;
 	text-transform: uppercase;
-	text-align: center;
-	border: 2px solid #FFFFFF;
-	box-sizing: border-box;
-	padding: 20px 60px;
-	font-family: $font-headers;
-	font-size: 18px;
-	color: #FFFFFF;
-	letter-spacing: 5.71px;
-	margin-top: 30px;
 }

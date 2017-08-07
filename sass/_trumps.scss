@@ -4,34 +4,10 @@
 		text-transform: uppercase;
 	}
 
-	.header__intro {
-		margin-bottom: 0;
-	}
-
-	.header__intro span{
-		@include phone {
-			display: none;
-		}
-
-		@include tablet {
-			display: none;
-		}
-	}
-
 	.header__subtext {
-		display: block;
 		@extend .h5;
 		letter-spacing: 0.3em;
 		font-weight: 400;
-		opacity: 0.3;
-
-		@include tablet{
-			
-		}
-
-		@include desktop{
-			
-		}
 	}
 
 	.header__taglineCopy {
@@ -39,16 +15,11 @@
 		text-transform: uppercase;
 		letter-spacing: 0.3em;
 		color: #fff;
-		opacity: 0.1;
 		text-align: center;
 
 		@include phone {
 			font-size: 12px;
 			line-height: 16px;
-
-			span {
-				display: block;
-			}
 		}
 	}
 }
@@ -58,5 +29,12 @@
 		text-transform: uppercase;
 		font-weight: 600;
 		line-height: 1em;
+	}
+
+	.section__number {
+		font-size: 24em;
+		font-weight: 700;
+		line-height: 1em;
+		font-family: $font-headers;
 	}
 }
